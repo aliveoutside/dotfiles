@@ -1,0 +1,6 @@
+mattmc3/ez-compinit
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+sainnhe/zsh-completions
+jackharrisonsherlock/common
