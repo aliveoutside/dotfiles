@@ -10,6 +10,7 @@ bindkey "^[[1;5D" backward-word
 HISTSIZE=10000
 SAVEHIST=10000
 setopt share_history
+HISTFILE=~/.zsh_history
 
 source '/usr/share/zsh-antidote/antidote.zsh'
 antidote load
