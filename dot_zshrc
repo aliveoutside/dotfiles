@@ -1,4 +1,14 @@
 EDITOR=/usr/bin/vim
 
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+HISTSIZE=10000
+SAVEHIST=10000
+setopt share_history
+
 source '/usr/share/zsh-antidote/antidote.zsh'
 antidote load
