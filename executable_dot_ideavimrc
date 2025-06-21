@@ -1,0 +1,57 @@
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'TheBlob42/idea-which-key'
+Plug 'AlexPi292/idea-easymotion'
+
+set scrolloff=5
+set linenumber
+set showmode
+set showcmd
+set visualbell
+set clipboard+=unnamed
+
+" Search improvements
+set ignorecase " Ignore case when searching
+set smartcase " Ignore case if search pattern is all lowercase, case-sensitive otherwise
+set incsearch " Show search matches as you type
+set hlsearch " Highlight search matches
+
+let mapleader = " "
+
+set surround "Allow to change surrounding characters with cs e.g. cs[{ results in {text} instead of [text]
+set highlightedyank
+set easymotion
+set mini-ai
+set which-key
+
+" Key mappings
+let g:WhichKeyDesc_ReformatCode = '<leader>f Re[f]ormat code'
+let g:WhichKeyDesc_CommentByLine = '<leader>c Toggle [c]omment by line'
+let g:WhichKeyDesc_Easymotion_s = '<leader>h Easymotion [h]ighlight'
+map <leader>f <Action>(ReformatCode)
+map <leader>c <Action>(CommentByLine)
+map <leader>h <Plug>(easymotion-s)
+
+" Jump between methods
+let g:WhichKeyDesc_MethodUp = '[[ Go to method above'
+let g:WhichKeyDesc_MethodDown = ']] Go to method below'
+nnoremap [[ <Action>(MethodUp)
+nnoremap ]] <Action>(MethodDown)
+" Popup menu navigation
+inoremap <C-n> <Action>(PopupMenu-selectNext)
+inoremap <C-p> <Action>(PopupMenu-selectPrevious)
+inoremap <C-y> <Action>(PopupMenu-return)
+" Refactoring
+let g:WhichKeyDesc_Refactor = "<leader>r [R]efactor"
+let g:WhichKeyDesc_Refactor_RenameElement = '<leader>rn Re[n]ame element'
+let g:WhichKeyDesc_Refactor_QuickListPopupAction = '<leader>rr [R]efactor'
+map <leader>rn <Action>(RenameElement)
+map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+
+set notimeout
+let g:WhichKey_ShowVimActions = true
+let g:WhichKey_FontSize = 14
+let g:WhichKey_FontFamily = 'JetBrains Mono'
+" Don't use Ex mode, use Q for formatting.
+map Q gq
