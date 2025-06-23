@@ -1,5 +1,6 @@
 EDITOR=/usr/bin/vim
 PATH=$PATH:~/.local/bin
+alias yay=yay --assume-installed nodejs-lts-iron=20.19.2 
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
