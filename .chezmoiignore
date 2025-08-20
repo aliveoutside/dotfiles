@@ -2,4 +2,4 @@
 dot_zshrc.tmpl
 dot_zshrc.save
 dot_zsh_plugins.txt
-{{- else }}
+{{- end }}
