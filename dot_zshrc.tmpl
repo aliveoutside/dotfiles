@@ -1,6 +1,5 @@
 EDITOR=/usr/bin/vim
 PATH=$PATH:~/.local/bin
-alias yay=yay --assume-installed nodejs-lts-iron=20.19.2 
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -17,6 +16,15 @@ HISTFILE=~/.zsh_history
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 {{ end }}
 {{ if eq .chezmoi.os "linux" }}
+{{   if eq .chezmoi.osRelease.id "arch" }}
 source '/usr/share/zsh-antidote/antidote.zsh'
+{{   else if eq .chezmoi.osRelease.id "ubuntu" }}
+source '.antidote/antidote.zsh'
+{{   end }}
 {{ end }}
+
+{{ if eq .chezmoi.os "linux" }}
+alias compile-arm='f(){ arm-linux-gnueabihf-as "$1" -o "${1%.s}.o" && arm-linux-gnueabihf-ld -static "${1%.s}.o" -o "${1%.s}" && rm "${1%.s}.o"; }; f'
+{{ end }}
+
 antidote load

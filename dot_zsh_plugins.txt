@@ -4,3 +4,5 @@ zsh-users/zsh-syntax-highlighting
 zsh-users/zsh-history-substring-search
 sainnhe/zsh-completions
 jackharrisonsherlock/common
+
+zsh-users/zsh-completions
