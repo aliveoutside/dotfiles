@@ -25,6 +25,7 @@ source '.antidote/antidote.zsh'
 
 {{ if eq .chezmoi.os "linux" }}
 alias compile-arm='f(){ arm-linux-gnueabihf-as "$1" -o "${1%.s}.o" && arm-linux-gnueabihf-ld -static "${1%.s}.o" -o "${1%.s}" && rm "${1%.s}.o"; }; f'
+alias compile-arm64='f(){ aarch64-linux-gnu-as "$1" -o "${1%.s}.o" && aarch64-linux-gnu-ld -static "${1%.s}.o" -o "${1%.s}" && rm "${1%.s}.o"; }; f'
 {{ end }}
 
 antidote load
