@@ -19,7 +19,7 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 {{   if eq .chezmoi.osRelease.id "arch" }}
 source '/usr/share/zsh-antidote/antidote.zsh'
 {{   else if eq .chezmoi.osRelease.id "ubuntu" }}
-source '.antidote/antidote.zsh'
+source ~/.antidote/antidote.zsh
 {{   end }}
 {{ end }}
 
