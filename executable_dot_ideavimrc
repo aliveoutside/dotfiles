@@ -2,6 +2,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 Plug 'TheBlob42/idea-which-key'
 Plug 'AlexPi292/idea-easymotion'
+Plug 'preservim/nerdtree'
 
 set scrolloff=5
 set linenumber
@@ -31,6 +32,7 @@ let g:WhichKeyDesc_Easymotion_s = '<leader>h Easymotion [h]ighlight'
 map <leader>f <Action>(ReformatCode)
 map <leader>c <Action>(CommentByLine)
 map <leader>h <Plug>(easymotion-s)
+map <leader>t :NERDTree<CR>
 
 " Jump between methods
 let g:WhichKeyDesc_MethodUp = '[[ Go to method above'

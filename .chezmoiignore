@@ -3,3 +3,7 @@ dot_zshrc.tmpl
 dot_zshrc.save
 dot_zsh_plugins.txt
 {{- end }}
+
+{{- if ne .chezmoi.os "windows" }}
+AppData/
+{{- end }}
