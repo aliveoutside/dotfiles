@@ -16,7 +16,7 @@ HISTFILE=~/.zsh_history
 source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 {{ end }}
 {{ if eq .chezmoi.os "linux" }}
-{{   if eq .chezmoi.osRelease.id "arch" }}
+{{   if eq .chezmoi.osRelease.idLike "arch" }}
 source '/usr/share/zsh-antidote/antidote.zsh'
 {{   else if eq .chezmoi.osRelease.id "ubuntu" }}
 source ~/.antidote/antidote.zsh
