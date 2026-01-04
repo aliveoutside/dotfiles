@@ -4,9 +4,13 @@ local config = wezterm.config_builder()
 config.font = wezterm.font 'JetBrainsMono Nerd Font'
 -- config.color_scheme = 'One Dark (Gogh)'
 
-
+{{ if eq .chezmoi.os "windows" }}
 config.default_prog = { 'pwsh' }
-config.enable_kitty_keyboard = true
 config.allow_win32_input_mode = false
+{{ else if eq .chezmoi.os "linux" }}
+config.default_prog = { 'pwsh' }
+{{ end }}
+
+config.enable_kitty_keyboard = true
 
 return config
