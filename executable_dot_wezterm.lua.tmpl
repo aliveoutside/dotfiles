@@ -8,7 +8,7 @@ config.font = wezterm.font 'JetBrainsMono Nerd Font'
 config.default_prog = { 'pwsh' }
 config.allow_win32_input_mode = false
 {{ else if eq .chezmoi.os "linux" }}
-config.default_prog = { 'pwsh' }
+config.default_prog = { 'zsh' }
 {{ end }}
 
 config.enable_kitty_keyboard = true
