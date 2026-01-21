@@ -20,6 +20,7 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 if (( $+commands[fzf] )); then
   source <(fzf --zsh)
   zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+  zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always $realpath'
 fi
 
 {{   if eq .chezmoi.osRelease.idLike "arch" }}
