@@ -19,6 +19,7 @@ source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 {{ if eq .chezmoi.os "linux" }}
 if (( $+commands[fzf] )); then
   source <(fzf --zsh)
+  zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 fi
 
 {{   if eq .chezmoi.osRelease.idLike "arch" }}
