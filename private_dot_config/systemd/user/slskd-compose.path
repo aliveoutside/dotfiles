@@ -1,0 +1,9 @@
+[Unit]
+Description=Start slskd when music directory appears
+
+[Path]
+PathExists=/media/hdd/Music
+Unit=slskd-compose.service
+
+[Install]
+WantedBy=default.target

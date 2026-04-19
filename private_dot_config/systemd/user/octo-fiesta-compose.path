@@ -1,0 +1,9 @@
+[Unit]
+Description=Start Octo Fiesta when target directory appears
+
+[Path]
+PathExists=/media/hdd/Music/!tosort
+Unit=octo-fiesta-compose.service
+
+[Install]
+WantedBy=default.target
