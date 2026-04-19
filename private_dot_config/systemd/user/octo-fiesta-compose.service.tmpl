@@ -1,0 +1,20 @@
+[Unit]
+Description=Octo Fiesta stack via podman-compose
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor={{ .chezmoi.homeDir }}/Docker/octo-fiesta
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+WorkingDirectory={{ .chezmoi.homeDir }}/Docker/octo-fiesta
+Environment=PODMAN_SYSTEMD_UNIT=%n
+ExecCondition=/usr/bin/test -d {{ .chezmoi.homeDir }}/Docker/octo-fiesta
+ExecCondition=/usr/bin/test -d /media/hdd/Music/!tosort
+ExecStart=/usr/bin/podman-compose up -d
+ExecStop=/usr/bin/podman-compose down
+TimeoutStartSec=0
+TimeoutStopSec=120
+
+[Install]
+WantedBy=default.target

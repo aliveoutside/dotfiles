@@ -1,15 +1,15 @@
 [Unit]
-Description=slskd stack via podman-compose
+Description=Navidrome stack via podman-compose
 Wants=network-online.target
 After=network-online.target
-RequiresMountsFor=/home/oof/Docker/slskd /media/hdd/Music
+RequiresMountsFor={{ .chezmoi.homeDir }}/Docker/navidrome /media/hdd/Music
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-WorkingDirectory=/home/oof/Docker/slskd
+WorkingDirectory={{ .chezmoi.homeDir }}/Docker/navidrome
 Environment=PODMAN_SYSTEMD_UNIT=%n
-ExecCondition=/usr/bin/test -d /home/oof/Docker/slskd
+ExecCondition=/usr/bin/test -d {{ .chezmoi.homeDir }}/Docker/navidrome
 ExecCondition=/usr/bin/test -d /media/hdd/Music
 ExecStart=/usr/bin/podman-compose up -d
 ExecStop=/usr/bin/podman-compose down
