@@ -8,6 +8,7 @@ config.default_prog = { 'pwsh' }
 config.allow_win32_input_mode = false
 {{ else if eq .chezmoi.os "linux" }}
 config.default_prog = { 'zsh' }
+config.color_scheme = 'Dracula'
 config.freetype_load_flags = 'NO_HINTING'
 config.front_end = 'OpenGL'
 config.freetype_load_target = 'Light'
