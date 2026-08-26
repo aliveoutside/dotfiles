@@ -2,23 +2,25 @@
 # the legacy `exa` command used by dot_zshrc.tmpl.
 packages:
   arch:
-    - aarch64-linux-gnu-binutils
-    - btop
-    - eza
-    - fd
-    - fzf
-    - git
-    - github-cli
-    - neovim
-    - nodejs
-    - npm
-    - pnpm
-    - ripgrep
-    - rustup
-    - stylua
-    - typescript-language-server
-    - vim
-    - wezterm
-    - yt-dlp
-    - zsh
-    - zsh-antidote
+    official:
+      - aarch64-linux-gnu-binutils
+      - btop
+      - eza
+      - fd
+      - fzf
+      - git
+      - github-cli
+      - neovim
+      - nodejs
+      - npm
+      - pnpm
+      - ripgrep
+      - rustup
+      - stylua
+      - typescript-language-server
+      - vim
+      - wezterm
+      - yt-dlp
+      - zsh
+    aur:
+      - zsh-antidote

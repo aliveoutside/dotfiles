@@ -46,8 +46,8 @@ for profile in ${(s: :)NIX_PROFILES} /run/current-system/sw; do
   fi
 done
 {{   else if or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch") }}
-source '/usr/share/zsh-antidote/antidote.zsh'
-alias yay=paru
+[[ -r /usr/share/zsh-antidote/antidote.zsh ]] && source /usr/share/zsh-antidote/antidote.zsh
+(( $+commands[paru] )) && alias yay=paru
 {{   else if eq .chezmoi.osRelease.id "ubuntu" }}
 source ~/.antidote/antidote.zsh
 {{   end }}
@@ -68,4 +68,4 @@ alias ls=exa
 {{ end }}
 
 
-antidote load
+(( $+functions[antidote] )) && antidote load

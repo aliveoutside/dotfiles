@@ -1,0 +1,5 @@
+[bitwarden]
+    command = "{{ joinPath .chezmoi.homeDir ".local/share/pnpm/bin/bw" }}"
+
+[hooks.read-source-state.pre]
+    command = "{{ joinPath .chezmoi.sourceDir ".install-password-manager.sh" }}"
