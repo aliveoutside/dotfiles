@@ -1,5 +1,6 @@
 vim.o.number = true
 vim.o.breakindent = true
+vim.o.guicursor = "n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 
 vim.o.undofile = true
 
@@ -10,7 +11,7 @@ vim.o.signcolumn = "yes"
 
 vim.o.updatetime = 250
 
-vim.o.timeoutlen = 2000
+vim.o.timeoutlen = 400
 
 vim.o.splitright = true
 vim.o.splitbelow = true

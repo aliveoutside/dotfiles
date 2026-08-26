@@ -1,0 +1,24 @@
+# Packages required by the dotfiles. Arch's eza package provides both `eza` and
+# the legacy `exa` command used by dot_zshrc.tmpl.
+packages:
+  arch:
+    - aarch64-linux-gnu-binutils
+    - btop
+    - eza
+    - fd
+    - fzf
+    - git
+    - github-cli
+    - neovim
+    - nodejs
+    - npm
+    - pnpm
+    - ripgrep
+    - rustup
+    - stylua
+    - typescript-language-server
+    - vim
+    - wezterm
+    - yt-dlp
+    - zsh
+    - zsh-antidote

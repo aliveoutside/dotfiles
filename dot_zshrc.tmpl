@@ -1,5 +1,19 @@
-EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/vim
+export VISUAL=/usr/bin/vim
+
 PATH=$PATH:~/.local/bin
+
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+
+{{ if and (eq .chezmoi.os "linux") (env "WSL_DISTRO_NAME") }}
+path+=(
+  /mnt/c/Users/oof/scoop/shims
+)
+{{ end }}
 
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -31,8 +45,9 @@ for profile in ${(s: :)NIX_PROFILES} /run/current-system/sw; do
     break
   fi
 done
-{{   else if eq .chezmoi.osRelease.idLike "arch" }}
+{{   else if or (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.osRelease.idLike "arch") }}
 source '/usr/share/zsh-antidote/antidote.zsh'
+alias yay=paru
 {{   else if eq .chezmoi.osRelease.id "ubuntu" }}
 source ~/.antidote/antidote.zsh
 {{   end }}

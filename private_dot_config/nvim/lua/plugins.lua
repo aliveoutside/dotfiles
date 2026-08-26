@@ -16,7 +16,6 @@ vim.pack.add({
 	"https://github.com/j-hui/fidget.nvim",
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
 	"https://github.com/stevearc/conform.nvim",
-	"https://github.com/nvim-telescope/telescope.nvim",
 	"https://github.com/folke/flash.nvim",
 	"https://github.com/CRAG666/betterTerm.nvim",
 	"https://github.com/nvim-mini/mini.clue.git",
@@ -64,21 +63,35 @@ require("plugins/fzf")
 local miniclue = require("mini.clue")
 miniclue.setup({
 	triggers = {
+		-- Leader
 		{ mode = "n", keys = "<Leader>" },
 		{ mode = "x", keys = "<Leader>" },
 
+		-- Window commands
+		{ mode = "n", keys = "<C-w>" },
+
+		-- Standard navigation and fold groups
 		{ mode = "n", keys = "g" },
 		{ mode = "x", keys = "g" },
-
 		{ mode = "n", keys = "z" },
 		{ mode = "x", keys = "z" },
-
-		{ mode = "n", keys = "f" },
-		{ mode = "x", keys = "f" },
 	},
 	clues = {
+		-- Leader sub-groups
+		{ mode = "n", keys = "<Leader>b", desc = "+Buffer" },
+		{ mode = "n", keys = "<Leader>f", desc = "+Find (fzf)" },
+		{ mode = "n", keys = "<Leader>t", desc = "+Terminal" },
+
+		-- Built-in generators
 		miniclue.gen_clues.builtin_completion(),
 		miniclue.gen_clues.g(),
 		miniclue.gen_clues.z(),
+		miniclue.gen_clues.windows(),
+	},
+	window = {
+		delay = 150,
+		config = {
+			border = "rounded",
+		},
 	},
 })

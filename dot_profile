@@ -1,2 +1,9 @@
 PATH="$HOME/.local/bin:$PATH"
 export npm_config_prefix="$HOME/.local"
+
+# SLSsteam: Add wrapper to PATH
+export PATH="$HOME/.local/share/SLSsteam/path:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/oof/.local/bin:$PATH"

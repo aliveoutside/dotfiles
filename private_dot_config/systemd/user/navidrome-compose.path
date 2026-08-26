@@ -1,9 +1,0 @@
-[Unit]
-Description=Start Navidrome when music directory appears
-
-[Path]
-PathExists=/media/hdd/Music
-Unit=navidrome-compose.service
-
-[Install]
-WantedBy=default.target

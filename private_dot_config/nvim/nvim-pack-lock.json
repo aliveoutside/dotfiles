@@ -9,11 +9,6 @@
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
     },
-    "codecompanion.nvim": {
-      "rev": "b3bb0d73079643d4a5b0d8b621cde619a73bc91a",
-      "src": "https://www.github.com/olimorris/codecompanion.nvim",
-      "version": "18.0.0 - 19.0.0"
-    },
     "conform.nvim": {
       "rev": "5420c4b5ea0aeb99c09cfbd4fd0b70d257b44f25",
       "src": "https://github.com/stevearc/conform.nvim"
@@ -37,10 +32,6 @@
     "lazydev.nvim": {
       "rev": "5231c62aa83c2f8dc8e7ba957aa77098cda1257d",
       "src": "https://github.com/folke/lazydev.nvim"
-    },
-    "llama.vim": {
-      "rev": "8e7d1d0a1b00529fc4601b24e134d214e67c44f6",
-      "src": "https://github.com/ggml-org/llama.vim"
     },
     "mason.nvim": {
       "rev": "57e5a8addb8c71fb063ee4acda466c7cf6ad2800",
@@ -72,17 +63,9 @@
       "rev": "6788013bb9cb784e606ada44206b0e755e4323d7",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
-    "oil.nvim": {
-      "rev": "756dec855b4811f2d27f067a3aca477f368d99f5",
-      "src": "https://github.com/stevearc/oil.nvim.git"
-    },
     "plenary.nvim": {
       "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
       "src": "https://github.com/nvim-lua/plenary.nvim"
-    },
-    "telescope.nvim": {
-      "rev": "e709d31454ee6e6157f0537f861f797bd44c0bad",
-      "src": "https://github.com/nvim-telescope/telescope.nvim"
     }
   }
 }
