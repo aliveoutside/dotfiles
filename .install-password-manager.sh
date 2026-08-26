@@ -1,7 +1,6 @@
 #!/bin/sh
 set -eu
 
-# Chezmoi runs this hook before reading and rendering the source state.
 pnpm_home=${PNPM_HOME:-"$HOME/.local/share/pnpm"}
 bw="$pnpm_home/bin/bw"
 [ -x "$bw" ] && exit 0

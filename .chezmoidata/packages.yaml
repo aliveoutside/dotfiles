@@ -1,5 +1,3 @@
-# Packages required by the dotfiles. Arch's eza package provides both `eza` and
-# the legacy `exa` command used by dot_zshrc.tmpl.
 packages:
   arch:
     official:
