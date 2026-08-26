@@ -4,7 +4,6 @@ packages:
   arch:
     official:
       - aarch64-linux-gnu-binutils
-      - btop
       - eza
       - fd
       - fzf
